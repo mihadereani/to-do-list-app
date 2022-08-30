@@ -16,5 +16,17 @@ function crossOut() {
 
 li.on('dbclick', function crossOut (){
     li.toggleClass('strike');
-  });
+});
+
+let crossOutButton = $(<crossOutButton></crossOutButton>);
+crossOutButton.append(document.createTextNode('X'));
+li.append(crossOutButton);
+
+crossOutButton.on("click", deleteListItem);
+function deleteListItem() {
+    li.addClass('delete');
+}
+
+$('#list').sortable();
+
 
