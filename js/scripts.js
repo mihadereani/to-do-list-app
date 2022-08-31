@@ -11,13 +11,9 @@ function newItem(){
         $(list).append(li);
     }
 
-    function crossOut() {
-        $(li).toggleClass('strike');
-    }
-
-    li.on('dbclick', function crossOut (){
-        li.toggleClass('strike');
-    });
+	li.on("dblclick", function () {
+		li.toggleClass('strike');
+	});
 
     let crossOutButton = $('<crossOutButton></crossOutButton>');
     crossOutButton.append(document.createTextNode('X'));
